@@ -1,0 +1,35 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* LOCAL OVERRIDE of al_folio_core/assets/css/main.scss.
+   Identical to the gem's file except for the NYU color tokens passed into `variables`.
+   After bumping al_folio_core, diff against the gem's copy:
+     bundle exec al-folio upgrade overrides diff assets/css/main.scss */
+
+@use "sass:math";
+@use "sass:string";
+
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }},
+  $purple-color: #57068c, // light-mode theme color: NYU Violet
+  $cyan-color: #b48fd6 // dark-mode theme color: lighter NYU violet (~6:1 contrast on the dark background)
+);
+
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";

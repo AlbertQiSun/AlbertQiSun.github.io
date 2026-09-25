@@ -1,0 +1,6 @@
+# Used by the (currently removed) repositories page. Example:
+# github_users:
+#   - YOUR-GITHUB-USERNAME
+# github_repos:
+#   - YOUR-GITHUB-USERNAME/paper-one
+repo_description_lines_max: 2

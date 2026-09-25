@@ -1,0 +1,20 @@
+# Badge styling for the `abbr` field in _bibliography/papers.bib.
+# Each key must match an `abbr` value exactly. `url` makes the badge a link.
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#57068c"
+
+"ACL":
+  url: https://2026.aclweb.org/
+  color: "#57068c"
+
+"EMNLP":
+  url: https://aclweb.org/
+  color: "#57068c"
+
+"JAMIA":
+  url: https://academic.oup.com/jamia
+  color: "#57068c"
+
+"Preprint":
+  color: "#6b7280"

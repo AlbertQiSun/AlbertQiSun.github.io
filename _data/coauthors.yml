@@ -1,0 +1,9 @@
+# Coauthor homepages: author names in the publication list become links.
+# Key = lowercase last name; firstname lists every spelling used in bib entries.
+"zhao":
+  - firstname: ["Chen", "C."]
+    url: https://henryzhao5852.github.io/
+
+"zhang":
+  - firstname: ["Siyue", "S."]
+    url: https://siyue-zhang.github.io/

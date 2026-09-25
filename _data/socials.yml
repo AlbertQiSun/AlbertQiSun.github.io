@@ -1,0 +1,15 @@
+# Social links shown on the homepage, in this order.
+# Full list of supported keys: https://github.com/george-gca/jekyll-socials
+email: qs2196@nyu.edu
+scholar_userid: m76pXmQAAAAJ
+openreview:
+  logo: https://openreview.net/images/openreview_logo_512.png
+  title: OpenReview
+  url: https://openreview.net/profile?id=~Qi_Sun16
+github_username: AlbertQiSun
+linkedin_username: "%E7%A5%BA-%E5%AD%99-13662b298"
+x_username: alberthatsuki
+cv_pdf: /assets/pdf/cv.pdf
+# semanticscholar_id:
+# orcid_id:
+# rss_icon: true # uncomment once the blog has posts
