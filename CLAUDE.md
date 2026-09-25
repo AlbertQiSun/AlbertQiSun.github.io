@@ -10,6 +10,10 @@ wsl -e bash -lc 'bash /mnt/d/NYU/HomePage/bin/serve-wsl.sh'   # http://localhost
 
 Ruby 3.4 lives in the WSL conda env `jekyll`; gems in `~/.gems/homepage`. From Git Bash, don't pass `/mnt/...` paths to `wsl` directly (MSYS path mangling) — wrap in `bash -lc`. `_config.yml` changes need a server restart.
 
+## Deploy
+
+Repo: `AlbertQiSun/AlbertQiSun.github.io` → https://albertqisun.github.io. Pushing to `main` runs `.github/workflows/deploy.yml`, which builds and force-pushes `_site` to the `gh-pages` branch; Pages serves `gh-pages` (`.nojekyll` keeps GitHub from re-running Jekyll). The `upstream` remote is the al-folio template (unrelated history — reference only). Use `--repo AlbertQiSun/AlbertQiSun.github.io` with `gh` if it ever resolves to upstream.
+
 ## Where content lives (single source of truth)
 
 | Content | File(s) |
