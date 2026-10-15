@@ -38,6 +38,6 @@ My research interests include:
 
 I am also broadly interested in LLM safety and in how model architectures shape what models learn.
 
-Currently, I am working on **on-policy distillation for search agents** and on **retrieval over abdominal CT/MRI radiology reports** for early detection of pancreatic cancer.
+Currently, I am working on **on-policy distillation for search agents** and on **auditing anatomical scope in clinical report retrieval** over abdominal CT/MRI radiology reports.
 
 **I am applying for Ph.D. programs starting Fall 2027.** Outside of research, I enjoy fishing and cooking.
