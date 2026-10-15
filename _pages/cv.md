@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 4
-description: Last updated September 2026.
+description: Last updated October 2026.
 ---
 
 <!-- The CV is maintained in LaTeX/Overleaf; replace assets/pdf/cv.pdf with the exported PDF and update the date above. -->
