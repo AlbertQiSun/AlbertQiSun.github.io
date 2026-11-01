@@ -2,64 +2,32 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Selected research and course projects.
-nav: false # enable once there are 2–3 projects
+description: Code behind my papers, plus agent and systems projects. Everything public is on my <a href="https://github.com/AlbertQiSun">GitHub</a>.
+nav: true
 nav_order: 2
-display_categories: [research, course]
-horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+<!-- _pages/projects.md
+     Hand-written list instead of the al-folio card grid, so each project gets a short explanation.
+     To add a project: copy one entry below. Keep each description to one or two sentences. -->
 
-{% else %}
+## research code
 
-<!-- Display projects without categories -->
+**DistOPD** · [code](https://github.com/AlbertQiSun/DistOPD)<br>
+Official implementation of _Rethinking Offline On-Policy Distillation_. It covers the full multi-turn agentic search pipeline: a Qwen3-4B student searching a wiki-18 retriever, one-pass teacher scoring with cached top-K probabilities, the distributional distillation loss, and Slurm templates for every stage.
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**Search-R1 for Qwen3** · [code](https://github.com/AlbertQiSun/searchr1-for-qwen3)<br>
+A rebuild of the Search-R1 agentic RL training pipeline on verl so that it supports Qwen3 models, with BM25 and E5 retrievers and a rule-based answer reward.
 
-  <!-- Generate cards for each project -->
+**On-policy distillation for search agents** · [code](https://github.com/AlbertQiSun/On-Policy-Distillation-Implementation-for-Search-o1)<br>
+On-policy distillation from a Qwen3-32B teacher into small Search-o1 style search agents, with LoRA training and probing scripts and BM25 and E5 retrieval.
 
-{% if page.horizontal %}
+## agents and reinforcement learning
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+**PokeAgent** · [code](https://github.com/AlbertQiSun/PokeAgent)<br>
+A Pokémon Showdown battle system (Gen 9 Battle Stadium Singles) where four agents compete: a Gemini agent, a local Qwen3-8B fine-tuned with LoRA SFT on human replays, a PPO agent pretrained by behavioral cloning and then trained through self-play, and a hybrid agent that pairs the PPO policy with LLM reasoning. All four share a battle-intelligence layer for damage calculation, metagame scouting, and opponent tracking.
+
+## systems and community
+
+**NYU Shanghai ICPC training platform**<br>
+Together with Prof. Xianbin Gu, I built the training platform for the NYU Shanghai ICPC team (Vue 3, Django). It includes an online judge and LLM-based personalized problem recommendation.

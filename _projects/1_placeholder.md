@@ -1,5 +1,6 @@
 ---
 layout: page
+published: false # template only, keeps /projects/1_placeholder/ from being built
 title: Project Title
 description: One-line summary of the project.
 importance: 1
