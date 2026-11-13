@@ -2,23 +2,23 @@
 # Each key must match an `abbr` value exactly. `url` makes the badge a link.
 "NeurIPS":
   url: https://neurips.cc/
-  color: "#57068c"
+  color: "#68448b"
 
 "ACL":
   url: https://2026.aclweb.org/
-  color: "#57068c"
+  color: "#ed1c24"
 
 "EMNLP":
   url: https://aclweb.org/
-  color: "#57068c"
+  color: "#ed1c24"
 
 "EACL":
   url: https://aclweb.org/
-  color: "#57068c"
+  color: "#ed1c24"
 
 "JAMIA":
   url: https://academic.oup.com/jamia
-  color: "#57068c"
+  color: "#599ad7"
 
 "Preprint":
   color: "#6b7280"
