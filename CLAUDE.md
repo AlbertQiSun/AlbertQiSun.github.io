@@ -35,6 +35,6 @@ Placeholders are marked `TODO` — `grep -rn TODO _config.yml _pages _data _news
 - Under-review papers: no venue name (`abbr = {Preprint}`) until accepted.
 - Keep customizations in `_config.yml`, `_data/`, content folders; avoid adding `_layouts/`, `_includes/`, `_sass/` overrides so gem upgrades stay painless (bump pins in both `Gemfile` and `_config.yml` `plugins:`).
 - The one deliberate override is `assets/css/main.scss` (shadows the gem's copy) to set NYU violet theme colors (`$purple-color` = light mode, `$cyan-color` = dark mode). After bumping `al_folio_core`, diff it against the gem's `assets/css/main.scss`.
-- Paper 2 (Search, Do not Guess) is committed to EACL 2027: badge stays `abbr = {Preprint}`, `note = {Committed to EACL 2027}`. Never post review scores. Switch the badge to EACL only after acceptance.
+- Paper 2 (Search, Do not Guess) is accepted to EACL 2027 (Nov 2026): `abbr = {EACL}`, `@inproceedings` with the EACL booktitle. Never post review scores.
 - Status text for `@misc` entries goes in `note` (rendered under the year); `howpublished` is not displayed.
 - Author markers: `*` equal contribution, `†` corresponding author (e.g. `Zhang*†, Siyue`), explained in `annotation`. Siyue Zhang and Chen Zhao are corresponding authors on PDA and DistOPD.
