@@ -1,0 +1,8 @@
+{%- comment -%}
+  Called by al_folio_core's bib layout after the venue line is assembled.
+  Appends a bold presentation/track label from the `venue_label` field in papers.bib,
+  e.g. venue_label = {Poster} or {Main Conference}. venue_label is in filtered_bibtex_keywords.
+{%- endcomment -%}
+{%- if entry.venue_label -%}
+  {%- capture entrytype -%}{{ entrytype }} <strong>({{ entry.venue_label }})</strong>{%- endcapture -%}
+{%- endif -%}
