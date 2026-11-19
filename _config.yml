@@ -7,7 +7,7 @@ first_name: Qi
 middle_name: (Albert)
 last_name: Sun
 contact_note: >
-  Email is the best way to reach me. For long-term contact, you can also use alberthatsuki [at] gmail [dot] com.
+  Email is the best way to reach me: <a href="mailto:qs2196@nyu.edu">qs2196@nyu.edu</a>. For long-term contact, you can also use alberthatsuki [at] gmail [dot] com.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal homepage of Qi (Albert) Sun, undergraduate researcher in Computer Science at NYU Shanghai, working on LLM distillation, agentic search, and medical AI.
 footer_text: >

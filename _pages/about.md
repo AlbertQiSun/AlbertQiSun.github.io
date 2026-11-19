@@ -13,6 +13,7 @@ profile:
     <p>NYU Shanghai</p>
     <p>567 West Yangsi Road</p>
     <p>Pudong New District, Shanghai, China</p>
+    <p><a href="mailto:qs2196@nyu.edu">qs2196@nyu.edu</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
