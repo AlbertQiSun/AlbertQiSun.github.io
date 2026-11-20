@@ -23,7 +23,7 @@ Repo: `AlbertQiSun/AlbertQiSun.github.io` → https://albertqisun.github.io. Pus
 | Papers (publications page + homepage "selected") | `_bibliography/papers.bib`, previews in `assets/img/publication_preview/` |
 | Venue badge colors/links | `_data/venues.yml` (key = bib `abbr`) |
 | Coauthor links | `_data/coauthors.yml` |
-| News | `_news/YYYY-MM-DD-slug.md` (`inline: true`) |
+| News | `_news/YYYY-MM-DD-slug.md` (`inline: true`). Rendered by `_includes/news_list.liquid` (separate rows, no scroll box): the homepage shows the newest 6 (`visible=6` at the end of `_pages/about.md`; the layout's `announcements` is disabled) with the rest under a collapsible "Older news"; `/news/` lists all |
 | Bio, photo, homepage sections | `_pages/about.md`, `assets/img/prof_pic.jpg` |
 | Social icons | `_data/socials.yml` |
 | CV | `assets/pdf/cv.pdf` (maintained in LaTeX elsewhere; CV page just embeds it) |
@@ -37,7 +37,7 @@ Placeholders are marked `TODO` — `grep -rn TODO _config.yml _pages _data _news
 ## Conventions
 
 - Under-review papers: no venue name (`abbr = {Preprint}`) until accepted.
-- Keep customizations in `_config.yml`, `_data/`, content folders; avoid adding `_layouts/`, `_includes/`, `_sass/` overrides so gem upgrades stay painless (bump pins in both `Gemfile` and `_config.yml` `plugins:`).
+- Keep customizations in `_config.yml`, `_data/`, content folders; avoid adding `_layouts/`, `_includes/`, `_sass/` overrides (new includes with their own names, like `_includes/news_list.liquid`, are fine: they shadow nothing) so gem upgrades stay painless (bump pins in both `Gemfile` and `_config.yml` `plugins:`).
 - The one deliberate override is `assets/css/main.scss` (shadows the gem's copy). It sets the theme colors (`$purple-color` = light mode, `$cyan-color` = dark mode, both the report's accent blue) and ends with a "Report theme" block that restyles the whole site after the RSI report (warm paper background, Inter / Noto Sans SC + Fragment Mono via `third_party_libraries.google_fonts` in `_config.yml`, hairline rules, pill chips). PurgeCSS runs in CI, so only target classes that appear in the built HTML. After bumping `al_folio_core`, diff it against the gem's `assets/css/main.scss`.
 - Paper 2 (Search, Do not Guess) is accepted to EACL 2027 (Nov 2026): `abbr = {EACL}`, `@inproceedings` with the EACL booktitle. Never post review scores.
 - Status text for `@misc` entries goes in `note` (rendered under the year); `howpublished` is not displayed.

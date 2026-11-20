@@ -19,9 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false # news is rendered at the end of this page's content by _includes/news_list.liquid instead
 
 latest_posts:
   enabled: true
@@ -42,3 +40,7 @@ I am also broadly interested in LLM safety and in how model architectures shape 
 Currently, I am working on **on-policy distillation for search agents** and on **auditing anatomical scope in clinical report retrieval** over abdominal CT/MRI radiology reports.
 
 **I am applying for Ph.D. programs starting Fall 2027.** Outside of research, I enjoy fishing and cooking.
+
+<h2 id="news"><a href="/news/">news</a></h2>
+
+{% include news_list.liquid visible=6 %}
