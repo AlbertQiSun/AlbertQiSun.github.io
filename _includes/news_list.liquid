@@ -1,0 +1,21 @@
+{% comment %}
+  News as separate dated rows (replaces the gem's single scrollable table).
+    {% include news_list.liquid visible=6 %}  homepage: newest `visible` items, the rest under a collapsible "Older news"
+    {% include news_list.liquid %}            /news/: every item
+{% endcomment %}
+{% assign news = site.news | reverse %}
+{% assign news_size = news | size %}
+{% if include.visible %}{% assign shown = include.visible | plus: 0 %}{% else %}{% assign shown = news_size %}{% endif %}
+{% capture news_rows %}{% for item in news limit: shown %}<li class="news-item"><time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time><div class="news-body">{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | strip | emojify }}{% else %}<a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div></li>{% endfor %}{% endcapture %}
+<div class="news-feed">
+{% if news_size == 0 %}<p>No news so far...</p>{% else %}
+<ul class="news-list">{{ news_rows }}</ul>
+{% if news_size > shown %}{% assign older = news_size | minus: shown %}
+<details class="news-older">
+<summary><span class="news-older-label">Older news</span> <span class="news-older-count">{{ older }}</span></summary>
+<ul class="news-list">{% for item in news offset: shown %}<li class="news-item"><time class="news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time><div class="news-body">{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | strip | emojify }}{% else %}<a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div></li>{% endfor %}</ul>
+</details>
+{% endif %}
+{% if include.visible %}<a class="news-all" href="{{ '/news/' | relative_url }}">All news →</a>{% endif %}
+{% endif %}
+</div>
